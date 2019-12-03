@@ -1,7 +1,7 @@
 function calculaPrazo()
 {    
     var campoDataParcela;
-    var 86400;
-    var valorDias = campoDataParcela/86400;
+    var dia = 86400;
+    var valorDias = campoDataParcela/dia;
     divResultado.innerHTML = valorDias;
 }
