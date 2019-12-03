@@ -56,15 +56,25 @@ function buscaValorParcelas() {
     });
 }
 
+var infoDataParcela;
+
 function buscaProximaParcela() {
     var proximaParcela;
     var campoDataParcela = document.getElementById("campoDataParcela");     
     contrato.dataProximaParcela()
     .then( (resultado) => {
         campoDataParcela.innerHTML = resultado;
+        infoDataParcela = resultado;
     })
     .catch( (err) => {
         console.error(err);
         campoDataParcela.innerHTML = err;
     });
+}
+
+function calculaPrazo()
+{   var dia = 86400;
+    var campoValorDias = document.getElementById("campoValorDias"); 
+    var valorDias = infoDataParcela/dia;
+    divResultado.innerHTML = campoValorDias;
 }
