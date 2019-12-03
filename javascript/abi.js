@@ -1,4 +1,4 @@
-[
+var abiContrato = [
 	{
 		"anonymous": false,
 		"inputs": [
