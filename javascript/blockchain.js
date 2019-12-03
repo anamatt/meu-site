@@ -76,5 +76,5 @@ function calculaPrazo()
 {   var dia = 86400;
     var campoValorDias = document.getElementById("campoValorDias"); 
     var campoValorDias = infoDataParcela/dia;
-    divResultado.innerHTML = campoValorDias;
+    campoValorDias.innerHTML = resultado;
 }
