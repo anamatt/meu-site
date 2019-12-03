@@ -31,7 +31,7 @@
     <script src="tempo.js"></script>
     <script>
       var status;
-      var valor;
+      var valorTotal;
       var parcelamento;
       var valorParcela;
       var proximaParcela;
@@ -43,6 +43,46 @@
       var campoValorParcela = document.getElementById("campoValorParcela");
       var campoDataParcela = document.getElementById("campoDataParcela");
       var valorDias = document.getElementById("valorDias");
+      contrato.parcelaPaga()
+            .then( (resultado) => {
+                campoStatus.innerHTML = resultado;
+            })
+            .catch( (err) => {
+                console.error(err);
+                campoStatus.innerHTML = err;
+            });  
+      contrato.valor()
+            .then( (resultado) => {
+                campoValor.innerHTML = resultado;
+            })
+            .catch( (err) => {
+                console.error(err);
+                campoValor.innerHTML = err;
+            });  
+      contrato.parcelamento()
+            .then( (resultado) => {
+                campoParcelamento.innerHTML = resultado;
+            })
+            .catch( (err) => {
+                console.error(err);
+                campoParcelamento.innerHTML = err;
+            });  
+      contrato.valorParcela()
+            .then( (resultado) => {
+              campoValorParcela.innerHTML = resultado;
+            })
+            .catch( (err) => {
+                console.error(err);
+                campoValorParcela.innerHTML = err;
+            });  
+      contrato.dataProximaParcela()
+            .then( (resultado) => {
+                campoDataParcela.innerHTML = resultado;
+            })
+            .catch( (err) => {
+                console.error(err);
+                campoDataParcela.innerHTML = err;
+            });  
   </script>
     <p>&nbsp;</p>
 </body>
