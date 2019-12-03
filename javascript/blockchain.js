@@ -75,6 +75,6 @@ function buscaProximaParcela() {
 function calculaPrazo()
 {   var dia = 86400;
     var campoValorDias = document.getElementById("campoValorDias"); 
-    var valorDias = infoDataParcela/dia;
+    var campoValorDias = infoDataParcela/dia;
     divResultado.innerHTML = campoValorDias;
 }
