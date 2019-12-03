@@ -22,68 +22,11 @@
     <div>O valor total do débito é <span id="campoValor">&nbsp;</span></div><br/>
     <div>O valor total foi dividido em <span id="campoParcelamento">&nbsp;</span> parcelas </div><br/>
     <div>O valor das parcelas é <span id="campoValorParcela">&nbsp;</span></div><br/>
-    <div>A próxima parcela vencerá em <span id="campoDataParcela">&nbsp;</span> segundos (<span id="valorDias"&nbsp;></span> dias) </div>
+    <div>A próxima parcela vencerá em <span id="campoDataParcela">&nbsp;</span> segundos (<span id="campoValorDias"&nbsp;></span> dias) </div>
     <hr>
     <br/><br/>
     <script charset="utf-8"  src="https://cdn.ethers.io/scripts/ethers-v4.min.js" type="text/javascript"></script>
     <script src="javascript/abi.js"></script>    
     <script src="javascript/blockchain.js"></script> 
-    <script src="tempo.js"></script>
-    <script>
-      var status;
-      var valorTotal;
-      var parcelamento;
-      var valorParcela;
-      var proximaParcela;
-      var campoDataParcela;
-      var valorDias;
-      var campoStatus = document.getElementById("campoStatus"); 
-      var campoValor = document.getElementById("campoValor");
-      var campoParcelamento = document.getElementById("campoParcelamento");
-      var campoValorParcela = document.getElementById("campoValorParcela");
-      var campoDataParcela = document.getElementById("campoDataParcela");
-      var valorDias = document.getElementById("valorDias");
-      contrato.parcelaPaga()
-            .then( (resultado) => {
-                campoStatus.innerHTML = resultado;
-            })
-            .catch( (err) => {
-                console.error(err);
-                campoStatus.innerHTML = err;
-            });  
-      contrato.valor()
-            .then( (resultado) => {
-                campoValor.innerHTML = resultado;
-            })
-            .catch( (err) => {
-                console.error(err);
-                campoValor.innerHTML = err;
-            });  
-      contrato.parcelamento()
-            .then( (resultado) => {
-                campoParcelamento.innerHTML = resultado;
-            })
-            .catch( (err) => {
-                console.error(err);
-                campoParcelamento.innerHTML = err;
-            });  
-      contrato.valorParcela()
-            .then( (resultado) => {
-              campoValorParcela.innerHTML = resultado;
-            })
-            .catch( (err) => {
-                console.error(err);
-                campoValorParcela.innerHTML = err;
-            });  
-      contrato.dataProximaParcela()
-            .then( (resultado) => {
-                campoDataParcela.innerHTML = resultado;
-            })
-            .catch( (err) => {
-                console.error(err);
-                campoDataParcela.innerHTML = err;
-            });  
-  </script>
-    <p>&nbsp;</p>
 </body>
 </html> 
