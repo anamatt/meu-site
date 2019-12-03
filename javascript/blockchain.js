@@ -18,7 +18,7 @@ function buscaStatusContrato() {
 }
 
 function buscaValorTotal() {
-    var valor;
+    var valorTotal;
     var campoValor = document.getElementById("campoValor");     
     contrato.valor()
     .then( (resultado) => {
